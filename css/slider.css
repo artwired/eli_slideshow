@@ -2,6 +2,7 @@ body {
 	background-image: url("../images/balloons.jpg");
 	background-repeat: no-repeat;
 	overflow: hidden;
+	background-color: #0A3E6A;
 }
 /* Wrap slider images and center on page */
 #slider_wrapper {
@@ -87,5 +88,14 @@ a#right {
 .last {
 	background-image: url("../images/last_btn.png");
 	background-repeat: no-repeat;
-
+}
+@media screen and (max-width: 1334px) {
+	body {
+		background-image: url("../images/mobile_balloons.jpg");
+	}
+} 
+@media screen and (max-width: 750px) {
+	body {
+		background-image: url("../images/balloons_mobile_small.jpg");
+	}
 }
