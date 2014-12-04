@@ -1,0 +1,91 @@
+body {
+	background-image: url("../images/balloons.jpg");
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+/* Wrap slider images and center on page */
+#slider_wrapper {
+	width: 620px;
+	margin: 0px auto;
+}
+#hb_type {
+	background-image: url("../images/hb_type.png");
+	background-repeat: no-repeat;
+	width: 562px;
+	height: 161px;
+	margin:0 auto;
+	text-indent: -9999px;
+}
+/* Stack slider images and hide them */
+#slider {
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+	margin:30px auto;
+	border-radius: 10px;
+	border:10px #fff solid;
+	background-color: #fff;
+	position: relative;
+}
+#slider > img {
+	width: 600px;
+	height: 400px;
+	/*float: left;*/
+	display: none;
+	position: absolute;
+	top: 0;
+}
+/* Slider Navigation Styles */
+a {
+	padding: 10px 10px 8px;
+	background-color: #c6c6c6;
+	margin-top: 5px;
+	text-decoration: none;
+	color: #000;
+	font-family: Helvetica, Arial, sans-serif;
+	border-radius: 5px;
+}
+/* Position slider navigation buttons */
+a#left {
+	float: left;
+}
+a#right {
+	float: right;
+}
+#audio-controls {
+	margin-left: 34%;
+}
+#audio-controls div {
+	float: left;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	margin: 2px 12px 0px 0px;
+}
+.play {
+	background-image: url("../images/play_btn.png");
+	background-repeat: no-repeat;
+}
+.playactive {
+	background-image: url("../images/play_active.png");
+	background-repeat: no-repeat;
+}
+.stop {
+	background-image: url("../images/pause_btn.png");
+	background-repeat: no-repeat;
+}
+.stopactive {
+	background-image: url("../images/pause_active.png");
+	background-repeat: no-repeat;
+}
+.next {
+	background-image: url("../images/next_btn.png");
+	background-repeat: no-repeat;
+
+}
+.last {
+	background-image: url("../images/last_btn.png");
+	background-repeat: no-repeat;
+
+}
