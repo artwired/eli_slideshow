@@ -94,7 +94,7 @@ a#right {
 		background-image: url("../images/mobile_balloons.jpg");
 	}
 } 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 320px) {
 	body {
 		background-image: url("../images/balloons_mobile_small.jpg");
 	}
