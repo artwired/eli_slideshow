@@ -34,7 +34,6 @@ body {
 	/*float: left;*/
 	display: none;
 	position: absolute;
-	top: 0;
 }
 /* Slider Navigation Styles */
 a {
@@ -53,42 +52,19 @@ a#left {
 a#right {
 	float: right;
 }
-#audio-controls {
-	margin-left: 34%;
-}
-#audio-controls div {
-	float: left;
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-	text-indent: -9999px;
-	margin: 2px 12px 0px 0px;
-}
-.play {
-	background-image: url("../images/play_btn.png");
-	background-repeat: no-repeat;
-}
-.playactive {
-	background-image: url("../images/play_active.png");
-	background-repeat: no-repeat;
-}
-.stop {
-	background-image: url("../images/pause_btn.png");
-	background-repeat: no-repeat;
-}
-.stopactive {
-	background-image: url("../images/pause_active.png");
-	background-repeat: no-repeat;
-}
-.next {
-	background-image: url("../images/next_btn.png");
-	background-repeat: no-repeat;
 
+/*Audio Styles*/
+audio {
+	margin-left: 13%;
+	margin-top: 8px;
 }
-.last {
-	background-image: url("../images/last_btn.png");
-	background-repeat: no-repeat;
+#playlist li {
+	list-style-type: none;
 }
+#playlist {
+	display: none;
+}
+
 @media screen and (max-width: 1334px) {
 	body {
 		background-image: url("../images/mobile_balloons.jpg");

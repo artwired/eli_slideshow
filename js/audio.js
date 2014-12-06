@@ -1,49 +1,41 @@
 $(document).ready(function() {
-	var audioArray = document.getElementsByClassName("playsong");
-	var nowPlaying = audioArray[i=0];
-	nowPlaying.load();
+var audio;
+var playlist;
+var tracks;
+var current;
 
-
-
-
-
-	$(".play").on("click", function() {
-		nowPlaying.play();
-	})
-	$(".play").on("click", function() {
-		$(".stop").removeClass("stopactive");
-		$(".play").addClass("playactive");
-	})
-	
-
-
-	$(".stop").on("click", function() {
-		nowPlaying.pause();
-	})
-	$(".stop").on("click", function() {
-		$(".play").removeClass("playactive");
-		$(".stop").addClass("stopactive");
-	})
-
-
-
-	$(".next").on("click", function() {
-		$.each($("audio.playsong"), function() {
-					this.pause();
-				});
-				++i;
-				nowPlaying = audioArray[i];
-				nowPlaying.load();
-				nowPlaying.play();
-	})
-	$(".last").on("click", function() {
-		$.each($("audio.playsong"), function() {
-					this.pause();
-				});
-				--i;
-				nowPlaying = audioArray[i];
-				nowPlaying.load();
-				nowPlaying.play();
-	})
+init();
+function init(){
+    current = 0;
+    audio = $('#audio');
+    playlist = $('#playlist');
+    tracks = playlist.find('li a');
+    len = tracks.length - 1;
+    audio[0].volume = .10;
+    audio[0].play();
+    playlist.find('a').click(function(e){
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+    });
+    audio[0].addEventListener('ended',function(e){
+        current++;
+        if(current > len){
+            current = 0;
+            link = playlist.find('a')[0];
+        }else{
+            link = playlist.find('a')[current];    
+        }
+        run($(link),audio[0]);
+    });
+}
+function run(link, player){
+        player.src = link.attr('href');
+        par = link.parent();
+        par.addClass('active').siblings().removeClass('active');
+        audio[0].load();
+        audio[0].play();
+}
 
 });
