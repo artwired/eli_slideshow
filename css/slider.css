@@ -14,7 +14,7 @@ body {
 	background-repeat: no-repeat;
 	width: 562px;
 	height: 161px;
-	margin:0 auto;
+	margin:-15px auto;
 	text-indent: -9999px;
 }
 /* Stack slider images and hide them */
@@ -22,7 +22,7 @@ body {
 	width: 600px;
 	height: 400px;
 	overflow: hidden;
-	margin:30px auto;
+	margin:20px auto;
 	border-radius: 10px;
 	border:10px #fff solid;
 	background-color: #fff;
